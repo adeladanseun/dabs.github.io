@@ -1,0 +1,248 @@
+:root {
+  --card-radius: 220px;
+  --container-width: 100vw;
+  --card-width: 180px;
+  --card-height: 250px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  position: relative;
+  transition: transform 9s;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  height: 300px;
+  width: calc(var(--card-radius) * 2);
+  display: inline-block;
+  animation: rotate 42s linear infinite;
+}
+/* .container:hover {
+    transform: rotateX(-25deg) rotateY(360deg);
+} */
+@keyframes rotate {
+  from {
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-15deg) rotateY(360deg);
+  }
+}
+.block-absolute {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: center center;
+  width: var(--card-width);
+  height: var(--card-height);
+}
+.block-absolute:nth-child(1) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(0deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(1):hover {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(0deg) translateZ(var(--card-radius))
+    translateY(-100px) translateZ(60px);
+}
+.block-absolute:nth-child(1) .slot:first-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.49\ PM.jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(1) .slot:last-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.49\ PM.jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(2) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(45deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(3) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(90deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(3):hover {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(90deg) translateZ(var(--card-radius))
+    translateY(-100px) translateZ(60px);
+}
+.block-absolute:nth-child(3) .slot:first-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.51\ PM.jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(3) .slot:last-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.51\ PM.jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(4) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(135deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(5) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(180deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(5):hover {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(180deg) translateZ(var(--card-radius))
+    translateY(-100px) translateZ(60px);
+}
+.block-absolute:nth-child(5) .slot:first-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.50\ PM.jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(5) .slot:last-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.50\ PM.jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(6) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(225deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(7) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(270deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(7):hover {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(270deg) translateZ(var(--card-radius))
+    translateY(-100px) translateZ(60px);
+}
+.block-absolute:nth-child(7) .slot:first-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.51\ PM\ \(1\).jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(7) .slot:last-child {
+  background: url("images/WhatsApp\ Image\ 2024-07-18\ at\ 12.06.51\ PM\ \(1\).jpeg");
+  background-size: cover;
+}
+.block-absolute:nth-child(8) {
+  transform: translateX(calc(var(--card-radius) - var(--card-width) / 2)) rotateY(315deg) translateZ(var(--card-radius));
+}
+.block-absolute:nth-child(even) {
+  visibility: hidden;
+}
+.block {
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  transform-style: preserve-3d;
+}
+.slot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: brown;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+.slot:nth-child(1) {
+  transform: translateZ(1px);
+  background-color: hsl(0, 2%, 74%);
+}
+.slot:nth-child(2) {
+  transform: translateZ(2px);
+  background-color: hsl(0, 0%, 95%);
+}
+.slot:nth-child(3) {
+  transform: translateZ(3px);
+  background-color: hsl(0, 0%, 90%);
+}
+.slot:nth-child(4) {
+  transform: translateZ(4px);
+  background-color: hsl(0, 0%, 85%);
+}
+.slot:nth-child(5) {
+  transform: translateZ(5px);
+  background-color: hsl(0, 0%, 80%);
+}
+.slot:nth-child(6) {
+  transform: translateZ(6px);
+  background-color: hsl(0, 0%, 75%);
+}
+.slot:nth-child(7) {
+  transform: translateZ(7px);
+  background-color: hsl(0, 0%, 70%);
+}
+.slot:nth-child(8) {
+  transform: translateZ(8px);
+  background-color: hsl(0, 0%, 65%);
+}
+.slot:nth-child(9) {
+  transform: translateZ(9px);
+  background-color: hsl(0, 0%, 60%);
+}
+.slot:nth-child(10) {
+  transform: translateZ(10px);
+  background-color: hsl(0, 0%, 55%);
+}
+.slot:nth-child(11) {
+  transform: translateZ(11px);
+  background-color: hsl(0, 0%, 50%);
+}
+.slot:nth-child(12) {
+  transform: translateZ(12px);
+  background-color: hsl(0, 0%, 45%);
+}
+.slot:nth-child(13) {
+  transform: translateZ(13px);
+  background-color: hsl(0, 0%, 40%);
+}
+.slot:nth-child(14) {
+  transform: translateZ(14px);
+  background-color: hsl(0, 0%, 35%);
+}
+.slot:nth-child(15) {
+  transform: translateZ(15px);
+  background-color: hsl(0, 0%, 30%);
+}
+.slot:nth-child(16) {
+  transform: translateZ(16px);
+  background-color: hsl(0, 0%, 25%);
+}
+.slot:nth-child(17) {
+  transform: translateZ(17px);
+  background-color: hsl(0, 0%, 20%);
+}
+.slot:nth-child(18) {
+  transform: translateZ(18px);
+  background-color: hsl(0, 0%, 15%);
+}
+.slot:nth-child(19) {
+  transform: translateZ(19px);
+  background-color: hsl(0, 0%, 10%);
+}
+.slot:nth-child(20) {
+  transform: translateZ(20px);
+  background-color: hsl(0, 1%, 25%);
+}
+@media (max-width: 400px) {
+  :root {
+    --card-radius: 100px;
+    --container-width: 100vw;
+    --card-width: 160px;
+    --card-height: 250px;
+  }
+}
+@media (max-width: 530px) and (min-width: 401px) {
+  :root {
+    --card-radius: 130px;
+    --container-width: 100vw;
+    --card-width: 180px;
+    --card-height: 250px;
+  }
+}
+@media (min-width: 531px) and (max-width: 700px) {
+  :root {
+    --card-radius: 160px;
+    --container-width: 100vw;
+    --card-width: 200px;
+    --card-height: 250px;
+  }
+}
+@media (min-width: 701px){
+  :root {
+    --card-radius: 220px;
+    --container-width: 100vw;
+    --card-width: 220px;
+    --card-height: 280px;
+  }
+}
